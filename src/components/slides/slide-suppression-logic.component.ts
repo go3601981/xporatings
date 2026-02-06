@@ -33,15 +33,15 @@ import { Component } from '@angular/core';
             </div>
           </div>
 
-          <!-- Layer 2: Event Limits -->
+          <!-- Layer 2: Session Limits -->
           <div class="bg-white p-5 rounded-xl border-l-8 border-[#10B981] shadow-sm flex items-center gap-5 relative overflow-hidden group">
             <div class="bg-green-50 p-3 rounded-full text-[#10B981] shrink-0">
                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
             </div>
             <div>
-              <h4 class="font-bold text-gray-900">Event-Level Quota</h4>
+              <h4 class="font-bold text-gray-900">Session-Level Quota</h4>
               <p class="text-sm text-gray-600 mt-1">
-                 Maximum <span class="font-semibold text-[#10B981]">1 attempt</span> per Event ID. If dismissed, we do not ask again during that conference.
+                 Maximum <span class="font-semibold text-[#10B981]">1 attempt</span> per Session ID. If dismissed, we do not ask again for that specific session.
               </p>
             </div>
           </div>

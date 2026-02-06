@@ -15,7 +15,7 @@ import { Component } from '@angular/core';
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         
         <!-- Point 1: Easy to Implement -->
         <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm flex flex-col h-full hover:border-blue-200 transition-colors">
@@ -50,43 +50,6 @@ import { Component } from '@angular/core';
            </p>
         </div>
 
-      </div>
-
-      <!-- Timeline -->
-      <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm mb-8">
-        <h4 class="font-bold text-gray-900 mb-6 text-lg">Execution Timeline</h4>
-        <div class="flex flex-col md:flex-row justify-between items-center relative">
-          <!-- Line -->
-          <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-100 -z-0"></div>
-          
-          <!-- Step 1 -->
-          <div class="relative z-10 bg-white p-2 flex flex-col items-center text-center w-full md:w-auto">
-            <div class="w-4 h-4 rounded-full bg-green-500 border-4 border-white shadow mb-2"></div>
-            <span class="text-xs font-bold text-gray-900 uppercase">Today</span>
-            <span class="text-sm text-gray-600">Approval</span>
-          </div>
-          
-          <!-- Step 2 -->
-          <div class="relative z-10 bg-white p-2 flex flex-col items-center text-center w-full md:w-auto">
-            <div class="w-4 h-4 rounded-full bg-blue-500 border-4 border-white shadow mb-2"></div>
-            <span class="text-xs font-bold text-gray-900 uppercase">Week 1-2</span>
-            <span class="text-sm text-gray-600">Dev Sprint</span>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="relative z-10 bg-white p-2 flex flex-col items-center text-center w-full md:w-auto">
-             <div class="w-4 h-4 rounded-full bg-indigo-500 border-4 border-white shadow mb-2"></div>
-             <span class="text-xs font-bold text-gray-900 uppercase">Week 3</span>
-             <span class="text-sm text-gray-600">QA & Beta</span>
-          </div>
-
-          <!-- Step 4 -->
-          <div class="relative z-10 bg-white p-2 flex flex-col items-center text-center w-full md:w-auto">
-             <div class="w-4 h-4 rounded-full bg-gray-900 border-4 border-white shadow mb-2"></div>
-             <span class="text-xs font-bold text-gray-900 uppercase">Week 4</span>
-             <span class="text-sm text-gray-600">Go Live (v4.3)</span>
-          </div>
-        </div>
       </div>
 
       <!-- Conclusion Statement -->

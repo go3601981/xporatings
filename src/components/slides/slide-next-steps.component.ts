@@ -48,7 +48,7 @@ import { Component } from '@angular/core';
              <div class="w-10 h-10 rounded-full bg-[#DCFCE7] text-[#16A34A] flex items-center justify-center font-bold text-lg shrink-0 border border-green-200 group-hover:bg-[#16A34A] group-hover:text-white transition-colors">4</div>
             <div class="pt-1">
               <h4 class="text-xl font-bold text-[#1F2937] mb-1">Proceed to Implementation</h4>
-              <p class="text-gray-600">Schedule development sprint. Target release: v4.3.0 update.</p>
+              <p class="text-gray-600">Schedule development sprint.</p>
             </div>
           </div>
 
