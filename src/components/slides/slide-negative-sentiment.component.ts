@@ -72,7 +72,8 @@ import { Component } from '@angular/core';
                <h4 class="text-2xl font-bold text-gray-900">Gaining Insight</h4>
              </div>
              <p class="text-gray-600 text-lg leading-relaxed mb-6">
-               This is the most valuable part of the system. We turn a potential 1-star public review into an actionable ticket for the engineering team.
+               We turn a potential 1-star public review into an actionable ticket.
+               <strong class="text-[#EA580C]">Feedback flows directly to Slack channel #app-feedback and creates a Jira ticket with 'Low' priority.</strong>
              </p>
           </div>
 
@@ -82,18 +83,17 @@ import { Component } from '@angular/core';
             <pre class="leading-relaxed"><span class="text-purple-400">const</span> feedbackPayload = &#123;
   <span class="text-blue-400">userSentiment</span>: <span class="text-green-400">"negative"</span>,
   <span class="text-blue-400">message</span>: <span class="text-green-400">"The map keeps crashing."</span>,
+  <span class="text-blue-400">routing</span>: <span class="text-green-400">"slack-alerts"</span>, // <span class="text-gray-500">// Direct to ops team</span>
   <span class="text-blue-400">context</span>: &#123;
     <span class="text-blue-400">eventId</span>: <span class="text-green-400">"CES_2026"</span>,
-    <span class="text-blue-400">platform</span>: <span class="text-green-400">"iOS 19.1"</span>,
-    <span class="text-blue-400">appVersion</span>: <span class="text-green-400">"4.2.0"</span>,
-    <span class="text-blue-400">lastViewedScreen</span>: <span class="text-green-400">"FloorPlanDetail"</span>
+    <span class="text-blue-400">platform</span>: <span class="text-green-400">"iOS 19.1"</span>
   &#125;
 &#125;;</pre>
           </div>
 
           <div class="flex items-center gap-4 text-sm text-gray-500 italic">
             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            This data is piped directly to our internal analytics (Mixpanel/Segment).
+            This operationalizes feedback instantly.
           </div>
 
         </div>

@@ -16,7 +16,7 @@ import { Component } from '@angular/core';
       </div>
 
       <!-- Vertical Tree Diagram -->
-      <div class="relative flex flex-col items-center w-full max-w-3xl mx-auto">
+      <div class="relative flex flex-col items-center w-full max-w-4xl mx-auto">
         
         <!-- Level 1: Trigger -->
         <div class="z-10 bg-white border border-gray-200 shadow-sm rounded-xl p-4 w-64 text-center relative flex flex-col items-center gap-2">
@@ -43,14 +43,16 @@ import { Component } from '@angular/core';
         <!-- Connector Split -->
         <div class="flex flex-col items-center w-full">
           <div class="h-6 w-0.5 bg-gray-300"></div>
-          <div class="w-[280px] md:w-[340px] h-4 border-t-2 border-x-2 border-gray-300 rounded-t-xl"></div>
+          <div class="w-[320px] md:w-[480px] h-4 border-t-2 border-x-2 border-gray-300 rounded-t-xl relative">
+              <div class="absolute top-0 left-1/2 -translate-x-1/2 w-0.5 h-4 bg-gray-300"></div>
+          </div>
         </div>
 
         <!-- Level 3: The Split Outcomes -->
-        <div class="w-full flex justify-between px-4 md:px-12 gap-4 -mt-1">
+        <div class="w-full flex justify-between px-2 md:px-0 max-w-4xl gap-2 md:gap-4 -mt-1">
            
            <!-- YES Path -->
-           <div class="flex flex-col items-center w-40 md:w-48">
+           <div class="flex flex-col items-center w-32 md:w-48">
              <div class="bg-green-500 text-white text-[10px] font-bold px-3 py-1 rounded-full mb-2 z-10 shadow-sm">YES</div>
              <div class="bg-green-50 border border-green-200 rounded-xl p-4 w-full text-center shadow-sm h-full">
                 <h4 class="font-bold text-green-900 text-sm mb-1">Request Review</h4>
@@ -60,8 +62,19 @@ import { Component } from '@angular/core';
              </div>
            </div>
 
+            <!-- DISMISS Path (New) -->
+           <div class="flex flex-col items-center w-32 md:w-48 pt-8 opacity-70">
+             <div class="bg-gray-400 text-white text-[10px] font-bold px-3 py-1 rounded-full mb-2 z-10 shadow-sm">DISMISS</div>
+             <div class="bg-gray-50 border-2 border-dashed border-gray-300 rounded-xl p-4 w-full text-center shadow-sm h-full">
+                <h4 class="font-bold text-gray-700 text-sm mb-1">Soft Suppression</h4>
+                <p class="text-[10px] text-gray-500 leading-snug">
+                  User swipes away.<br>Ask again in 3 days.
+                </p>
+             </div>
+           </div>
+
            <!-- NO Path -->
-           <div class="flex flex-col items-center w-40 md:w-48">
+           <div class="flex flex-col items-center w-32 md:w-48">
              <div class="bg-orange-500 text-white text-[10px] font-bold px-3 py-1 rounded-full mb-2 z-10 shadow-sm">NO</div>
              <div class="bg-orange-50 border border-orange-200 rounded-xl p-4 w-full text-center shadow-sm h-full">
                 <h4 class="font-bold text-orange-900 text-sm mb-1">Feedback Form</h4>
@@ -75,7 +88,8 @@ import { Component } from '@angular/core';
 
         <!-- Connector Converge -->
         <div class="flex flex-col items-center w-full -mt-2">
-           <div class="w-[280px] md:w-[340px] h-4 border-b-2 border-x-2 border-gray-300 rounded-b-xl"></div>
+           <!-- Only converge YES and NO visually for the hard suppression -->
+           <div class="w-[320px] md:w-[480px] h-4 border-b-2 border-x-2 border-gray-300 rounded-b-xl"></div>
            <div class="h-6 w-0.5 bg-gray-300"></div>
         </div>
 
@@ -86,15 +100,15 @@ import { Component } from '@angular/core';
             </div>
             <div class="text-left">
                <h4 class="font-bold text-gray-800 text-xs">90-Day Cooldown</h4>
-               <p class="text-[10px] text-gray-500">Prevent fatigue.</p>
+               <p class="text-[10px] text-gray-500">Global suppression.</p>
             </div>
         </div>
 
       </div>
 
       <!-- Logic Detail Box -->
-      <div class="mt-10 bg-white border-l-4 border-[#3B5BDB] rounded-r-xl p-6 shadow-sm max-w-4xl mx-auto w-full">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="mt-8 bg-white border-l-4 border-[#3B5BDB] rounded-r-xl p-5 shadow-sm max-w-4xl mx-auto w-full">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div>
                   <h5 class="font-semibold text-gray-900 text-xs uppercase tracking-wide mb-1">Segmentation</h5>
                   <p class="text-gray-600 text-xs leading-relaxed">Separates promoters from detractors <em>before</em> they reach the public storefront.</p>

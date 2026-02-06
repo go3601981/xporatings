@@ -46,7 +46,20 @@ import { Component } from '@angular/core';
             </div>
           </div>
 
-          <!-- Layer 3: Contextual -->
+          <!-- Layer 3: Version Reset -->
+          <div class="bg-white p-5 rounded-xl border-l-8 border-purple-500 shadow-sm flex items-center gap-5 relative overflow-hidden group">
+            <div class="bg-purple-50 p-3 rounded-full text-purple-600 shrink-0">
+               <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900">Major Version Reset</h4>
+              <p class="text-sm text-gray-600 mt-1">
+                 Suppression persists across patches (v4.1 -> v4.2) but resets on major overhauls (v4.0 -> v5.0) to capture new UX sentiment.
+              </p>
+            </div>
+          </div>
+
+          <!-- Layer 4: Contextual -->
           <div class="bg-white p-5 rounded-xl border-l-8 border-[#F59E0B] shadow-sm flex items-center gap-5 relative overflow-hidden group">
             <div class="bg-yellow-50 p-3 rounded-full text-[#F59E0B] shrink-0">
                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>

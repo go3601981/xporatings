@@ -35,8 +35,14 @@ import { Component } from '@angular/core';
 
              <!-- The Modal -->
              <div class="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm z-10">
-                <div class="bg-white w-[85%] rounded-2xl p-6 shadow-2xl transform transition-all scale-100">
-                   <h4 class="text-center font-bold text-gray-900 text-lg mb-2">Enjoying ExpoPass?</h4>
+                <div class="bg-white w-[85%] rounded-2xl p-6 shadow-2xl transform transition-all scale-100 relative">
+                   
+                   <!-- Explicit Close Button -->
+                   <div class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 cursor-pointer">
+                      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                   </div>
+
+                   <h4 class="text-center font-bold text-gray-900 text-lg mb-2 mt-2">Enjoying ExpoPass?</h4>
                    <p class="text-center text-gray-500 text-sm mb-6 leading-relaxed">
                      We'd love to know how your experience is going so far.
                    </p>
@@ -50,7 +56,7 @@ import { Component } from '@angular/core';
                      </button>
                    </div>
                    
-                   <button class="mt-4 w-full text-center text-xs text-gray-400 font-medium hover:text-gray-600">
+                   <button class="mt-4 w-full text-center text-xs text-gray-400 font-bold hover:text-gray-600 uppercase tracking-wide">
                      Not now
                    </button>
                 </div>
@@ -96,24 +102,14 @@ import { Component } from '@angular/core';
                  <p class="text-gray-500 text-xs mt-0.5">Yes / No. This simple bifurcation routes the user to the correct next step.</p>
                </div>
              </li>
-
-             <li class="flex items-start gap-4 p-3 rounded-lg hover:bg-white hover:shadow-sm transition-all border border-transparent hover:border-gray-100">
-               <div class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0">
-                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" /></svg>
-               </div>
-               <div>
-                 <h5 class="font-bold text-gray-900 text-sm">Zero Iconography</h5>
-                 <p class="text-gray-500 text-xs mt-0.5">No stars. No store badges. Visualizing ratings primes the user to think about "work" (writing a review).</p>
-               </div>
-             </li>
              
              <li class="flex items-start gap-4 p-3 rounded-lg hover:bg-white hover:shadow-sm transition-all border border-transparent hover:border-gray-100">
                <div class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0">
                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
                </div>
                <div>
-                 <h5 class="font-bold text-gray-900 text-sm">Easy Dismissal</h5>
-                 <p class="text-gray-500 text-xs mt-0.5">The "Not now" or "Close" option must be clearly visible, not hidden in small print.</p>
+                 <h5 class="font-bold text-gray-900 text-sm">Non-Blocking / Easy Dismissal</h5>
+                 <p class="text-gray-500 text-xs mt-0.5">The "Close" button is highly visible. We strictly avoid trapping the user.</p>
                </div>
              </li>
           </ul>

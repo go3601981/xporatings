@@ -15,7 +15,7 @@ import { Component } from '@angular/core';
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
         
         <!-- Metric 1: Funnel Health -->
         <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex flex-col h-full hover:shadow-md transition-shadow">
@@ -30,13 +30,9 @@ import { Component } from '@angular/core';
                <span class="text-gray-600">Response Rate</span>
                <span class="font-mono font-bold text-gray-900">15-20%</span>
              </li>
-             <li class="flex justify-between items-center text-sm border-b border-gray-100 pb-2">
+             <li class="flex justify-between items-center text-sm pt-1">
                <span class="text-gray-600">Dismissal Rate</span>
                <span class="font-mono font-bold text-gray-900">&lt; 50%</span>
-             </li>
-             <li class="flex justify-between items-center text-sm pt-1">
-               <span class="text-gray-600">Trigger Fatigue</span>
-               <span class="font-mono font-bold text-green-600">Low</span>
              </li>
           </ul>
         </div>
@@ -54,13 +50,9 @@ import { Component } from '@angular/core';
                <span class="text-gray-600">Yes / No Split</span>
                <span class="font-mono font-bold text-gray-900">Tracked</span>
              </li>
-             <li class="flex justify-between items-center text-sm border-b border-gray-100 pb-2">
-               <span class="text-gray-600">Feedback Completion</span>
-               <span class="font-mono font-bold text-gray-900">&gt; 30%</span>
-             </li>
              <li class="flex justify-between items-center text-sm pt-1">
-               <span class="text-gray-600">Avg. Message Length</span>
-               <span class="font-mono font-bold text-gray-900">Attributes</span>
+               <span class="text-gray-600">Feedback Filled</span>
+               <span class="font-mono font-bold text-gray-900">&gt; 30%</span>
              </li>
           </ul>
         </div>
@@ -71,10 +63,10 @@ import { Component } from '@angular/core';
              <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-600">
                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
              </div>
-             <h4 class="font-bold text-lg text-gray-800">Platform Impact</h4>
+             <h4 class="font-bold text-lg text-gray-800">Star Rating</h4>
           </div>
           <p class="text-sm text-gray-600 mb-4 leading-relaxed">
-            The lagging indicator. We monitor the 30-day moving average of App Store ratings.
+            30-day moving average of App Store ratings.
           </p>
           <div class="h-2 bg-gray-100 rounded-full overflow-hidden">
              <div class="h-full bg-green-500 w-3/4 rounded-full"></div>
@@ -91,16 +83,35 @@ import { Component } from '@angular/core';
              <div class="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center text-orange-600">
                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
              </div>
-             <h4 class="font-bold text-lg text-gray-800">Product Insight</h4>
+             <h4 class="font-bold text-lg text-gray-800">Insight Captured</h4>
           </div>
-          <div class="flex gap-2 flex-wrap">
-             <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded border border-gray-200">Crash Reports</span>
-             <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded border border-gray-200">Feature Requests</span>
-             <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded border border-gray-200">UX Friction</span>
-          </div>
-          <p class="text-sm text-gray-600 mt-3 leading-relaxed">
-             Which triggers yield the most useful feedback? Are "End of Day" prompts more actionable than "Post-Session"?
+          <p class="text-sm text-gray-600 mt-1 leading-relaxed">
+             Volume of actionable tickets generated from negative sentiment flows.
           </p>
+        </div>
+
+        <!-- Metric 5: Retention Impact (NEW) -->
+        <div class="bg-white p-6 rounded-xl border-l-4 border-red-500 shadow-sm flex flex-col h-full hover:shadow-md transition-shadow md:col-span-2 lg:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+             <div class="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center text-red-600">
+               <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+             </div>
+             <h4 class="font-bold text-lg text-gray-800">Retention Impact (D30)</h4>
+          </div>
+          <p class="text-sm text-gray-600 mb-3 leading-relaxed">
+             We monitor if users who see the prompt have a different retention rate than the control group.
+          </p>
+          <div class="flex gap-8 text-sm">
+             <div>
+                <span class="block text-gray-400 text-xs uppercase">Control Group</span>
+                <span class="font-bold text-gray-800">42% Retained</span>
+             </div>
+             <div>
+                <span class="block text-gray-400 text-xs uppercase">Prompted Group</span>
+                <span class="font-bold text-gray-800">42% Retained</span>
+             </div>
+          </div>
+          <p class="text-xs text-green-600 mt-2 font-medium">Goal: No negative impact on retention.</p>
         </div>
 
       </div>
@@ -113,14 +124,8 @@ import { Component } from '@angular/core';
          <div class="relative z-10">
             <h5 class="text-xl font-bold mb-2">Quality > Volume</h5>
             <p class="text-gray-300 text-sm md:text-base leading-relaxed max-w-2xl">
-               Our primary success metric is not the number of ratings we solicit, but the ratio of <strong>Solicited Ratings</strong> to <strong>Retained Users</strong>. If ratings go up but retention drops due to annoyance, we have failed.
+               Our primary success metric is the ratio of <strong>Solicited Ratings</strong> to <strong>Retained Users</strong>. If ratings go up but retention drops due to annoyance, we have failed.
             </p>
-         </div>
-         
-         <div class="relative z-10 shrink-0">
-            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-[#3B5BDB] to-indigo-600 flex items-center justify-center shadow-lg border-2 border-white/20">
-               <svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            </div>
          </div>
       </div>
 

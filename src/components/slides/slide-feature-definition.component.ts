@@ -75,7 +75,7 @@ import { Component } from '@angular/core';
             </li>
             <li class="flex gap-4">
               <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#EF4444] shrink-0"></span>
-              <span class="text-lg text-[#4B5563]">A replacement for <strong>user research</strong>.</span>
+              <span class="text-lg text-[#4B5563]">A substitute for <strong>qualitative user interviews</strong>.</span>
             </li>
           </ul>
         </div>
