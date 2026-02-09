@@ -10,14 +10,17 @@ import { SlideUxPhilosophyComponent } from './components/slides/slide-ux-philoso
 import { SlideFeatureDefinitionComponent } from './components/slides/slide-feature-definition.component';
 import { SlidePlatformConstraintsComponent } from './components/slides/slide-platform-constraints.component';
 import { SlideTriggersComponent } from './components/slides/slide-triggers.component';
+import { SlideTriggerScopeComponent } from './components/slides/slide-trigger-scope.component';
 import { SlideAvoidTriggersComponent } from './components/slides/slide-avoid-triggers.component';
 import { SlideSuppressionLogicComponent } from './components/slides/slide-suppression-logic.component';
+import { SlideFrequencyRulesComponent } from './components/slides/slide-frequency-rules.component';
 import { SlideUserFlowComponent } from './components/slides/slide-user-flow.component';
 import { SlidePositiveSentimentComponent } from './components/slides/slide-positive-sentiment.component';
 import { SlideNegativeSentimentComponent } from './components/slides/slide-negative-sentiment.component';
 import { SlidePrePromptModalComponent } from './components/slides/slide-pre-prompt-modal.component';
 import { SlideEdgeCasesComponent } from './components/slides/slide-edge-cases.component';
 import { SlideSuccessMetricsComponent } from './components/slides/slide-success-metrics.component';
+import { SlideImplementationDecisionComponent } from './components/slides/slide-implementation-decision.component';
 import { SlideFinalRecommendationComponent } from './components/slides/slide-final-recommendation.component';
 import { SlideNextStepsComponent } from './components/slides/slide-next-steps.component';
 
@@ -35,14 +38,17 @@ import { SlideNextStepsComponent } from './components/slides/slide-next-steps.co
     SlideFeatureDefinitionComponent,
     SlidePlatformConstraintsComponent,
     SlideTriggersComponent,
+    SlideTriggerScopeComponent,
     SlideAvoidTriggersComponent,
     SlideSuppressionLogicComponent,
+    SlideFrequencyRulesComponent,
     SlideUserFlowComponent,
     SlidePositiveSentimentComponent,
     SlideNegativeSentimentComponent,
     SlidePrePromptModalComponent,
     SlideEdgeCasesComponent,
     SlideSuccessMetricsComponent,
+    SlideImplementationDecisionComponent,
     SlideFinalRecommendationComponent,
     SlideNextStepsComponent
   ],

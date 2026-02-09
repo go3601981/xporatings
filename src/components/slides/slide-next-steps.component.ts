@@ -31,7 +31,7 @@ import { Component } from '@angular/core';
           <div class="flex gap-4 items-start group">
             <div class="w-10 h-10 rounded-full bg-[#EFF6FF] text-[#3B5BDB] flex items-center justify-center font-bold text-lg shrink-0 border border-blue-100 group-hover:bg-[#3B5BDB] group-hover:text-white transition-colors">2</div>
             <div class="pt-1">
-              <h4 class="text-xl font-bold text-[#1F2937] mb-1">Incorporate CEO Feedback</h4>
+              <h4 class="text-xl font-bold text-[#1F2937] mb-1">Incorporate Leadership & Success Feedback</h4>
               <p class="text-gray-600">Adjust suppression thresholds or trigger timing based on executive review.</p>
             </div>
           </div>
