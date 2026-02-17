@@ -66,9 +66,9 @@ import { Component } from '@angular/core';
            <div class="flex flex-col items-center w-32 md:w-48 pt-8 opacity-70">
              <div class="bg-gray-400 text-white text-[10px] font-bold px-3 py-1 rounded-full mb-2 z-10 shadow-sm">DISMISS</div>
              <div class="bg-gray-50 border-2 border-dashed border-gray-300 rounded-xl p-4 w-full text-center shadow-sm h-full">
-                <h4 class="font-bold text-gray-700 text-sm mb-1">Soft Suppression</h4>
+                <h4 class="font-bold text-gray-700 text-sm mb-1">Suppressed</h4>
                 <p class="text-[10px] text-gray-500 leading-snug">
-                  User swipes away.<br>Ask again in 3 days.
+                  User swipes away.<br>Done for this event.
                 </p>
              </div>
            </div>
@@ -99,8 +99,8 @@ import { Component } from '@angular/core';
                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
             </div>
             <div class="text-left">
-               <h4 class="font-bold text-gray-800 text-xs">90-Day Cooldown</h4>
-               <p class="text-[10px] text-gray-500">Global suppression.</p>
+               <h4 class="font-bold text-gray-800 text-xs">Event-Level Block</h4>
+               <p class="text-[10px] text-gray-500">Suppressed for Event ID.</p>
             </div>
         </div>
 
@@ -110,16 +110,16 @@ import { Component } from '@angular/core';
       <div class="mt-8 bg-white border-l-4 border-[#3B5BDB] rounded-r-xl p-5 shadow-sm max-w-4xl mx-auto w-full">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div>
-                  <h5 class="font-semibold text-gray-900 text-xs uppercase tracking-wide mb-1">Segmentation</h5>
-                  <p class="text-gray-600 text-xs leading-relaxed">Separates promoters from detractors <em>before</em> they reach the public storefront.</p>
+                  <h5 class="font-semibold text-gray-900 text-xs uppercase tracking-wide mb-1">One Shot</h5>
+                  <p class="text-gray-600 text-xs leading-relaxed">We get one chance per event. If dismissed, we respect the user and do not ask again until the next event.</p>
               </div>
               <div>
                   <h5 class="font-semibold text-gray-900 text-xs uppercase tracking-wide mb-1">Safety</h5>
                   <p class="text-gray-600 text-xs leading-relaxed">Ensures detractors feel heard via the Feedback Form without damaging public reputation.</p>
               </div>
               <div>
-                  <h5 class="font-semibold text-gray-900 text-xs uppercase tracking-wide mb-1">Compliance</h5>
-                  <p class="text-gray-600 text-xs leading-relaxed">Respects platform rules by not incentivizing ratings, merely gating the <em>request</em>.</p>
+                  <h5 class="font-semibold text-gray-900 text-xs uppercase tracking-wide mb-1">Event-Scope</h5>
+                  <p class="text-gray-600 text-xs leading-relaxed">Suppression is local to the event. A user attending 5 events a year is eligible 5 times.</p>
               </div>
           </div>
       </div>

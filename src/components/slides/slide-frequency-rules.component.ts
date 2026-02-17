@@ -26,11 +26,11 @@ import { Component } from '@angular/core';
 
          <!-- Row 1 -->
          <div class="grid grid-cols-12 p-6 border-b border-gray-100 items-center hover:bg-gray-50/50 transition-colors">
-            <div class="col-span-3 font-bold text-gray-900">Default Frequency</div>
-            <div class="col-span-6 text-gray-600 text-sm">User attends a single event (1-3 days).</div>
+            <div class="col-span-3 font-bold text-gray-900">Trigger Frequency</div>
+            <div class="col-span-6 text-gray-600 text-sm">User hits a trigger (e.g. Chat) during an event.</div>
             <div class="col-span-3">
                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                 1 Prompt Max
+                 1 Prompt Per Event ID
                </span>
             </div>
          </div>
@@ -41,7 +41,7 @@ import { Component } from '@angular/core';
             <div class="col-span-6 text-gray-600 text-sm">User taps "Close" or "Not Now" on the pre-prompt.</div>
             <div class="col-span-3">
                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-                 Stop for Event
+                 Suppressed for Event
                </span>
             </div>
          </div>
@@ -49,21 +49,21 @@ import { Component } from '@angular/core';
          <!-- Row 3 -->
          <div class="grid grid-cols-12 p-6 border-b border-gray-100 items-center hover:bg-gray-50/50 transition-colors">
             <div class="col-span-3 font-bold text-gray-900">Return User</div>
-            <div class="col-span-6 text-gray-600 text-sm">User attends a <em>different</em> event 2 months later.</div>
+            <div class="col-span-6 text-gray-600 text-sm">User attends a <em>different</em> event (New ID).</div>
             <div class="col-span-3">
                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                 Eligible Again
+                 Immediate Reset
                </span>
             </div>
          </div>
 
          <!-- Row 4 -->
          <div class="grid grid-cols-12 p-6 items-center hover:bg-gray-50/50 transition-colors">
-            <div class="col-span-3 font-bold text-gray-900">Spam Prevention</div>
-            <div class="col-span-6 text-gray-600 text-sm">User hits multiple triggers in one day (e.g., 5 chats).</div>
+            <div class="col-span-3 font-bold text-gray-900">OS Constraint</div>
+            <div class="col-span-6 text-gray-600 text-sm">Apple/Google limits native prompts to ~3 per year.</div>
             <div class="col-span-3">
                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
-                 Debounce (Only 1st)
+                 Accept OS Fail
                </span>
             </div>
          </div>
@@ -74,9 +74,9 @@ import { Component } from '@angular/core';
       <div class="mt-8 flex gap-6">
          <div class="w-1.5 bg-[#3B5BDB] rounded-full"></div>
          <div>
-            <h4 class="text-lg font-bold text-[#1F2937]">Why no "Daily" prompts?</h4>
+            <h4 class="text-lg font-bold text-[#1F2937]">The "Fresh Start" Policy</h4>
             <p class="text-gray-600 mt-1 max-w-2xl">
-               In a 2-day event, asking "Are you enjoying this?" every day feels like nagging. We respect the user's focus. If we didn't get them on the first strong trigger, we likely won't get them on the second.
+               Since usage is rare, we do not carry over suppression from one event to another. Every event is a new opportunity to capture sentiment, provided the OS quota allows it.
             </p>
          </div>
       </div>

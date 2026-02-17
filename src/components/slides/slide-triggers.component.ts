@@ -61,36 +61,17 @@ import { Component } from '@angular/core';
           </div>
       </div>
 
-      <!-- Removed/Downgraded Section -->
-      <div class="mb-6">
-        <h4 class="text-sm font-bold text-gray-500 uppercase tracking-wide mb-3">Removed / Downgraded Triggers</h4>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            
-            <div class="bg-gray-50 border border-gray-200 rounded-lg p-3 opacity-60">
-                <div class="flex items-center gap-2 mb-1">
-                    <span class="text-red-500 text-lg font-bold">×</span>
-                    <span class="font-semibold text-gray-700 text-sm">Post Check-in</span>
-                </div>
-                <p class="text-xs text-gray-500">Too early. User hasn't experienced event value yet.</p>
-            </div>
-
-            <div class="bg-gray-50 border border-gray-200 rounded-lg p-3 opacity-60">
-                <div class="flex items-center gap-2 mb-1">
-                    <span class="text-red-500 text-lg font-bold">×</span>
-                    <span class="font-semibold text-gray-700 text-sm">Agenda Review</span>
-                </div>
-                <p class="text-xs text-gray-500">Passive action. Doesn't indicate success, just browsing.</p>
-            </div>
-
-            <div class="bg-gray-50 border border-gray-200 rounded-lg p-3 opacity-60">
-                <div class="flex items-center gap-2 mb-1">
-                    <span class="text-yellow-500 text-lg font-bold">?</span>
-                    <span class="font-semibold text-gray-700 text-sm">Session Completion</span>
-                </div>
-                <p class="text-xs text-gray-500">Only valid if user explicitly submits session feedback (High Signal).</p>
-            </div>
-
-        </div>
+      <!-- Zero-Trigger Tolerance Block -->
+      <div class="mb-6 bg-gray-100 rounded-xl p-6 border-l-4 border-gray-500 flex flex-col md:flex-row items-center gap-6">
+          <div class="hidden md:block p-3 bg-white rounded-full text-gray-500 shadow-sm shrink-0">
+             <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          </div>
+          <div>
+             <h4 class="text-lg font-bold text-gray-800 mb-1">Zero-Trigger Tolerance</h4>
+             <p class="text-gray-600 leading-relaxed text-sm md:text-base">
+                If a user attends a 1-day event and <em>never</em> chats or scans, <strong>we never ask</strong>. We accept 0% volume for passive users. Silence is better than annoyance.
+             </p>
+          </div>
       </div>
 
       <!-- Emphasis -->
